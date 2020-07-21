@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: composer -v
+      - run: php -v
