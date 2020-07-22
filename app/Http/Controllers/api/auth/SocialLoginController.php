@@ -13,7 +13,8 @@ class SocialLoginController extends Controller
 
    }
 
-   public function callback() {
-
+   public function callback($service) {
+        $serviceUser = Socialite::driver($service)->user();
+        dd($serviceUser);
    }
 }
