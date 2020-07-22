@@ -15,9 +15,9 @@ class CreateUserSocialTable extends Migration
     {
         Schema::create('user_social', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('social_id')->nullable();
-            $table->string('service')->nullable();
+            $table->string('service');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

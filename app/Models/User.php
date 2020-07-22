@@ -47,4 +47,12 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    public function social() {
+        return $this->hasMany(UserSocial::class, 'user_id', 'id');
+    }
+    public function hasSocialLinked($service): bool
+    {
+        return $this->social->where('service', $service)->count();
+    }
 }
