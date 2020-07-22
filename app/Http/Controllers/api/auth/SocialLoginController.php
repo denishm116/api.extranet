@@ -10,7 +10,7 @@ class SocialLoginController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('social');
+//        $this->middleware('social');
     }
 
     public function redirect($service) {
