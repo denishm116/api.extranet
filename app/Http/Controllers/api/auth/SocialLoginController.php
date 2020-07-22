@@ -64,7 +64,7 @@ class SocialLoginController extends Controller
         }
 
 
-        return redirect(env('CLIENT_BASE_URL') . '/auth/social-callback?token=' . $this->auth->fromUser($user) . '&origin=' . ($newUser ? 'register' : 'login'));
+        return redirect(env('CLIENT_BASE_URL') . 'auth/social-callback?token=' . $this->auth->fromUser($user) . '&origin=' . ($newUser ? 'register' : 'login'));
     }
 
     public function needsToCreateSocial(User $user, $service)
