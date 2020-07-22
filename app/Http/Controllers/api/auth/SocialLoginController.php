@@ -62,7 +62,7 @@ class SocialLoginController extends Controller
                 'service' => $service
             ]);
         }
-        dd($user);
+
 
         return redirect(env('CLIENT_BASE_URL') . '/auth/social-callback?token=' . $this->auth->fromUser($user) . '&origin=' . ($newUser ? 'register' : 'login'));
     }
