@@ -22,10 +22,10 @@ class EventServiceProvider extends ServiceProvider
             // add your listeners (aka providers) here
             'SocialiteProviders\\VKontakte\\VKontakteExtendSocialite@handle',
         ],
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            // add your listeners (aka providers) here
-            'SocialiteProviders\\Yandex\\YandexExtendSocialite@handle',
-        ],
+//        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+//            // add your listeners (aka providers) here
+//            'SocialiteProviders\\Yandex\\YandexExtendSocialite@handle',
+//        ],
     ];
 
     /**
