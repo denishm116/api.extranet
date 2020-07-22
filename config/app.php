@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://extranet.more-otdih.online'),
+    'url' => env('APP_URL', 'https://api.extranet.more-otdih.online'),
 
     'asset_url' => env('ASSET_URL', null),
 
