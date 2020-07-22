@@ -15,7 +15,7 @@ class SocialMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $services = ['google', 'yandex', 'vk', 'instagram'];
+        $services = ['google', 'yandex', 'vkontakte', 'instagram'];
         $enabledServices = [];
         foreach ($services as $service) {
             if (config('services' . $service)) {
