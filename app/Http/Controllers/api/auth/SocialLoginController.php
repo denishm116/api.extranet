@@ -8,7 +8,12 @@ use Laravel\Socialite\Facades\Socialite;
 
 class SocialLoginController extends Controller
 {
-   public function redirect($service) {
+    public function __construct()
+    {
+        $this->middleware('social');
+    }
+
+    public function redirect($service) {
        return Socialite::driver($service)->stateless()->redirect();
 
    }
