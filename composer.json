@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "socialiteproviders/vkontakte": "^4.1",
+        "socialiteproviders/yandex": "^3.1",
         "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {

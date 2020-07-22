@@ -43,4 +43,10 @@ return [
         'redirect' => env('VKONTAKTE_REDIRECT_URL')
     ],
 
+    'yandex' => [
+        'client_id' => env('YANDEX_CLIENT_ID'),
+        'client_secret' => env('YANDEX_CLIENT_SECRET'),
+        'redirect' => env('YANDEX_REDIRECT_URL')
+    ],
+
 ];
