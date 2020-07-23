@@ -10,9 +10,10 @@ Route::group(['prefix' => '/auth', ['middleware' => ['throttle:20,5']]], functio
     Route::post('/logout', 'api\auth\LoginController@logout');
     Route::get('/login/{service}', 'api\auth\SocialLoginController@redirect');
     Route::get('/login/{service}/callback', 'api\auth\SocialLoginController@callback');
-});
 
-Route::group(['middleware' => ['jwt.auth']], function (){
-    Route::get('/home', 'HomeController@testapi');
 });
+Route::get('/home', 'HomeController@testapi');
+//Route::group(['middleware' => ['jwt.auth']], function (){
+//
+//});
 Route::get('/test', 'HomeController@testapi2');
