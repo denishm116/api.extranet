@@ -12,8 +12,8 @@ Route::group(['prefix' => '/auth', ['middleware' => ['throttle:20,5']]], functio
     Route::get('/login/{service}/callback', 'api\auth\SocialLoginController@callback');
 
 });
-Route::get('/home', 'HomeController@testapi');
-//Route::group(['middleware' => ['jwt.auth']], function (){
-//
-//});
+
+Route::group(['middleware' => ['jwt.auth']], function (){
+    Route::get('/home', 'HomeController@testapi');
+});
 Route::get('/test', 'HomeController@testapi2');
